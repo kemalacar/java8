@@ -16,16 +16,16 @@ public class FunctionalInterfaceExample {
         Map<String,List<String>> cityCountryMap = Data.cityCountryMap;
 
 
-        Result germany = (country,city)-> {
+        Result cityFinder = (country,city)-> {
             List<String> cities = cityCountryMap.get(country);
             return cities!=null? cities.contains(city) : false ;//must return interface's search return (Boolean).
         };
 
 
-        System.out.println("Berlin is a Germany city ? " + germany.search("Germany","Berlin"));
-        System.out.println("Istanbul is a Russian city ? " + germany.search("Russian","Istanbul"));
-        System.out.println("Moscow is a Spain city ? " + germany.search("Spain","Moscow"));
-        System.out.println("Barcelona is a Spain city ? " + germany.search("Spain","Barcelona"));
+        System.out.println("Berlin is a Germany city ? " + cityFinder.search("Germany","Berlin"));
+        System.out.println("Istanbul is a Russian city ? " + cityFinder.search("Russian","Istanbul"));
+        System.out.println("Moscow is a Spain city ? " + cityFinder.search("Spain","Moscow"));
+        System.out.println("Barcelona is a Spain city ? " + cityFinder.search("Spain","Barcelona"));
 
     }
 }
