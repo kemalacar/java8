@@ -1,5 +1,5 @@
 # java8
-JAVA 8 new features and samples
+JAVA 8 new features and examples
 
 - Lambda expressions / Functional interfaces
 - Method references
